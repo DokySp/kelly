@@ -9,16 +9,12 @@ void main(List<String> args) {
 }
 
 class MyApp extends StatelessWidget {
-  // TODO: iOS 상단바 색 조절 필요
   @override
-  Widget build(BuildContext context) => AnnotatedRegion<SystemUiOverlayStyle>(
-        value: SystemUiOverlayStyle.dark,
-        child: MaterialApp(
-          home: WelcomeView(),
-          routes: {
-            "/MainView": (_) => MainView(),
-            "/welcomeView": (_) => WelcomeView(),
-          },
-        ),
+  Widget build(BuildContext context) => MaterialApp(
+        home: WelcomeView(),
+        routes: {
+          "/MainView": (_) => MainView(),
+          "/welcomeView": (_) => WelcomeView(),
+        },
       );
 }
